@@ -29,14 +29,16 @@ class Quiz {
     
       moveToNextQuestion() {
 
-     if (this.currentQuestionIndex < this.questions.length - 1) {
-       this.currentQuestionIndex++;
-       return this.currentQuestionIndex;
+        this.currentQuestionIndex++;
+      }
+
+     /* if (this.currentQuestionIndex < this.questions.length - 1) {
+          this.currentQuestionIndex++;
+          return this.currentQuestionIndex;
     
-  } else {
-    return "you\'re done";
-  }
-}
+        } else {
+          return "you\'re done";
+        } */
 
     // 4. shuffleQuestions()
     shuffleQuestions() {
@@ -65,13 +67,16 @@ class Quiz {
 
     // 6. hasEnded()
     hasEnded() {
-      if (this.currentQuestionIndex < this.questions.length) {
+
+      return this.currentQuestionIndex >= this.questions.length;
+    }
+     /*  if (this.currentQuestionIndex < this.questions.length) {
         return false;
       }
       else if (this.currentQuestionIndex == this.questions.length) {
         return true;
       }
-      }
+      } */
         
     
     // 7. filterQuestionsByDifficulty(difficulty)
